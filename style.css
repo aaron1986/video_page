@@ -117,6 +117,11 @@ h1 {
     box-shadow: 0 6px 6px rgba(255, 255, 255, 0.6);
 }
 
+button a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
 /* main */
 
 .container {
@@ -127,14 +132,14 @@ h1 {
 
 img#main-image {
     width: 400px;
-    height: 300px;
+    height: 298px;
     margin-top: 5%;
 }
 
 img#main-image2 {
     width: 200px;
     height: 250px;
-    margin-left: -5%;
+    margin-left: -8%;
   margin-top: 9%;
 }
 
@@ -144,6 +149,127 @@ img#main-image2 {
     margin-top: 5%;
 }
 
+
+/* image gallery */
+
+h2 {
+    color: #ee1c1c;
+    font-family: "heading-text";
+    font-weight: 400;
+  font-style: normal;
+  font-size: 90px;
+  text-indent: -16px;
+    line-height: 78px;
+    margin-bottom: 19px;
+    text-align: center;
+    margin-top: 10%;
+}
+
+.image-container{
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    grid-auto-rows: 100px 300px;
+    grid-gap: 10px;
+    grid-auto-flow: dense;
+    margin-left: 2%;
+    margin-right: 5%;
+  }
+
+  .gallery-item{
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+  
+  .gallery-item .image{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+  
+  .gallery-item .image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 50% 50%;
+    cursor: pointer;
+    transition:.5s ease-in-out;
+  }
+  
+  .gallery-item:hover .image img{
+    transform: scale(1.5);
+  }
+  
+  .gallery-item .text{
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: white;
+    font-size: 25px;
+    pointer-events: none;
+    z-index: 4;
+    transition: .3s ease-in-out;
+    -webkit-backdrop-filter: blur(5px) saturate(1.8);
+    backdrop-filter: blur(5px) saturate(1.8);
+  }
+  
+  .gallery-item:hover .text{
+    opacity: 1;
+    animation: move-down .3s linear;
+    padding: 1em;
+    width: 100%;
+  }
+  
+  .w-1{
+    grid-column: span 1;
+  }
+  
+  .w-2{
+    grid-column: span 2;
+  }
+  
+  .w-3{
+    grid-column: span 3;
+  }
+  
+  .w-4{
+    grid-column: span 4;
+  }
+  
+  .w-5{
+    grid-column: span 5;
+  }
+  
+  .w-6{
+    grid-column: span 6;
+  }
+  
+  .h-1{
+    grid-row: span 1;
+  }
+  
+  .h-2{
+    grid-row: span 2;
+  }
+  
+  .h-3{
+    grid-row: span 3;
+  }
+  
+  .h-4{
+    grid-row: span 4;
+  }
+  
+  .h-5{
+    grid-row: span 5;
+  }
+  
+  .h-6{
+    grid-row: span 6;
+  }
+  
 /* fonts */
 @font-face {
     font-family: "nav-text";
